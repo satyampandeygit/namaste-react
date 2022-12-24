@@ -4,7 +4,7 @@ Question 1: What is emmet?
 
 Answer 1: Emmet is web developer toolkit that helps us to write html & css more easily. 
 
-				- They are different from snippets because snippets cannot be extended at runtime.
+- They are different from snippets because snippets cannot be extended at runtime.
 
 Question 2: Difference between library and a framework?
 
