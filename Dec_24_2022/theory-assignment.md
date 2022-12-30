@@ -8,8 +8,6 @@ Answer 1: Emmet is web developer toolkit that helps us to write html & css more 
 
 Question 2: Difference between library and a framework?
 
-Answer 2: 
-
 ### Library
 
 - Library are the collections of classes and functions already written to ease the development process.
@@ -24,3 +22,9 @@ Answer 2:
 - Framework provides bluepring and basic framework and also tells programmer that what is needed for the customisation.
 - Framework provides the flow of the software application and tells the developer what it needs and calls the code provided by the developer as required.
 - Framework calls the code written by developer as required unlike library where developer calls the code using API.
+
+Question 3: What is CDN? why do we use it?
+
+- CDN refers to the distributed group of servers which work together to provide fast delivery of internet content.
+- A CDN helps in quick transfer of assests for loading website content such HTML pages, Javascript files, stylesheets, images and videos.
+- It helps websites from Distributed Denial of Service(DDoS)
