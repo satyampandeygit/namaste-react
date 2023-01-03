@@ -27,6 +27,6 @@ Question: What is Parcel?
 - Its easy to configure feature makes developer's life more easy.
 - It bundles HTML, CSS, Javascript and Typescript too.
 
-Question: What is '.parcel-cache' do?
+Question: What does '.parcel-cache' do?
 
 - This folder is used by Parcel as a temproary cache directory when building your app for development and production.
