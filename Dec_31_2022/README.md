@@ -26,3 +26,7 @@ Question: What is Parcel?
 - Parcel is a bundler. It performs all the functionalities of bundler but doesn't requires configuration like all other bundlers.
 - Its easy to configure feature makes developer's life more easy.
 - It bundles HTML, CSS, Javascript and Typescript too.
+
+Question: What is '.parcel-cache' do?
+
+- This folder is used by Parcel as a temproary cache directory when building your app for development and production.
