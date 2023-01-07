@@ -1,0 +1,47 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.logo{
+    width: 100px;
+}
+
+.nav-items > ul{
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-items > ul > li{
+    padding: 5px;
+}
+
+.card{
+    width: 240px;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+}
+
+.card > img {
+    width: 100%;
+}
+
+.restraunt-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: 2px solid aqua;
+    margin: 10px;
+}
+
+.footer{
+    color: black;
+    font-style: italic;
+    font-size: larger;
+    margin: auto;
+    width: 50%;
+}
