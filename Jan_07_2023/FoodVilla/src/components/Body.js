@@ -1,5 +1,6 @@
 import RestaurantCard from "./RestrauntCard";
 import { restrauntList } from "./Constants";
+import { useState } from "react";
 
 
 // for line 1706-1719
@@ -95,15 +96,50 @@ import { restrauntList } from "./Constants";
 
 // };
 
+// function filterData(searchText, restraunts){
+//     restraunts.filter(restraunt => {
+//         restraunt.data.name.toLowerCase().includes(searchText.toLowerCase());
+// }
+
 const Body = () => {
+
+    const [searchText, setSearchText] = useState("");
+    const [restaurants, setRestaurants] = useState(restrauntList);
+    
     return (
-        <div className="restraunt-list">
-            {
-                restrauntList.map( restraunt => {
-                    return (<RestaurantCard {...restraunt.data}/>);
-                })
-            }
-        </div>
+        <>
+            <div className="search-container">
+                <input
+                    type="text"
+                    className="search-input"
+                    placeholder="Search"
+                    onChange = {(e) => {
+                        console.log(e.target.value)
+                        setSearchText(e.target.value);
+                    }}
+                />
+                <button onClick={ () => {
+                    if(searchText !== ''){
+                        const data = restaurants.filter(restaurants => {
+                            return restaurants.data.name.includes(searchText);
+                        });
+
+                        setRestaurants(data)
+                    }else{
+                        setRestaurants(restrauntList);
+                    }
+                }}>
+                Search</button>
+            </div>
+            <h3>{searchText}</h3>
+            <div className="restraunt-list">
+                {
+                    restaurants.map( restraunt => {
+                        return (<RestaurantCard {...restraunt.data}/>);
+                    })
+                }
+            </div>
+        </>
     )
 }
 
