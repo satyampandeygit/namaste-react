@@ -1,9 +1,15 @@
+import RestaurantCard from "./RestaurantCard";
+
 const Shimmer = () => {
     return (
-        <>
-            <h3>Shimmer UI</h3>
-            <p>Loading</p>
-        </>
+        <div className="restaurant-list">
+            {
+            Array(10).
+                fill('').
+                map(e => <div className="shimmer-card"></div>)
+            }
+            
+        </div>
     )
 }
 

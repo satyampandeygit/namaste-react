@@ -35,6 +35,13 @@
     flex-wrap: wrap;
 }
 
+.shimmer-card{
+    width: 240px;
+    height: 200px;
+    margin: 20px;
+    background-color: grey;
+}
+
 .search-container{
     width: 50%;
     margin: auto
