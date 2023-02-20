@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { LOGO } from "./Constants";
+import { Link } from "react-router-dom";
 
 
 const Header = () => {
@@ -15,13 +16,13 @@ const Header = () => {
 
     return (
         <div className="header">
-            <a href="/">
+            <Link to="/">
                 <img className="logo" src={LOGO} alt="FoodVilla" />
-            </a>
+            </Link>
 
             <ul className="nav-item">
-                <li>Home</li>
-                <li>About</li>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/about"> About </Link></li>
                 <li>Contact</li>
                 <li>Cart</li>
             </ul>

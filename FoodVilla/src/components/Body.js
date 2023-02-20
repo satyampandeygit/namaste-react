@@ -65,6 +65,7 @@ const Body = () => {
                                 key = {restaurant.data.id}
                                 name = {restaurant.data.name}
                                 image = {restaurant.data.cloudinaryImageId}
+                                cuisines= {restaurant.data.cuisines}
                                 rating = {restaurant.data.avgRating}
                             />
                         )
