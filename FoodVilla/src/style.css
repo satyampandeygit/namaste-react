@@ -56,3 +56,21 @@
     margin: 5px;
     padding: 10px;
 }
+
+.restaurant-menu{
+    border: 1px dashed gray;
+    width: 80%;
+    margin: auto;
+    padding: 5px;
+}
+
+.restaurant-menu > img {
+    width: 200px;
+}
+
+.menu-item{
+    width: 50%;
+    margin: auto;
+    background-color: beige;
+    padding: 10px;
+}
