@@ -27,7 +27,19 @@ const Header = () => {
                 <li>Cart</li>
             </ul>
 
-            <button className="login-button" onClick={() => { isLoggedIn? setIsLoggedIn(false) : setIsLoggedIn(true) }}>{liveState}</button>
+            {/* <button className="login-button" onClick={() => { isLoggedIn? setIsLoggedIn(false) : setIsLoggedIn(true) }}>{liveState}</button> */}
+
+            {
+                !isLoggedIn ? (
+                    <Link to="/login">
+                        <button className="login-button" onClick={() => {setIsLoggedIn(true)}}>Log In</button>
+                    </Link>
+                ) : (
+                    <Link to="/">
+                        <button className="login-button" onClick={ () => { setIsLoggedIn(false) } }> Log Out</button>
+                    </Link>
+                )
+            }
         </div>
     )
 }
