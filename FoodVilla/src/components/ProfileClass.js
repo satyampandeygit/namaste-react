@@ -17,6 +17,14 @@ class Profile extends React.Component{
         console.log("componentDidMount");
     }
 
+    componentDidUpdate(){
+
+    }
+
+    componentWillUnmount(){
+        
+    }
+
     render(){
         console.log("render");
         return (
