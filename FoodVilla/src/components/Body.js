@@ -2,13 +2,7 @@ import { useEffect, useState } from "react";
 import { restrauntList } from "./Constants";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
-
-function filterData(searchText, restaurants){
-    const filterData = restaurants.filter( (restaurant) => {
-        return restaurant.data.name.toLowerCase().includes(searchText.toLowerCase());
-    });
-    return filterData;
-}
+import { filterData } from "../utils/helper";
 
 const Body = () => {
 
