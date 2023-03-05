@@ -3,6 +3,7 @@ import { restrauntList } from "./Constants";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import { filterData } from "../utils/helper";
+import useOnline from "../utils/useOnline";
 
 const Body = () => {
 
@@ -10,6 +11,7 @@ const Body = () => {
     const [searchText, setSearchText] = useState("");
     const [allRestaurants, setAllRestaurants] = useState([]);
     const [filteredRestaurants, setFilteredRestaurants] = useState([]);
+    const isOnline = useOnline();
 
     // if @params deps is empty then useEffec is called on once after page is loaded
     // if @params deps contains variable then useEffect is called whenever value of that variable changes
@@ -29,7 +31,10 @@ const Body = () => {
         setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);   
     }
 
-    console.log("render");
+    if(!isOnline){
+        return <h1>🔴 Not online! Check your connection.</h1>
+    }
+    
     return allRestaurants.length === 0 ? <Shimmer /> : (
         <>
             <div className="search-container">

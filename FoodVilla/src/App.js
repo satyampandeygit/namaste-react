@@ -1,15 +1,26 @@
-import React, { Children } from "react";
-import ReactDOM from "react-dom";
+import React, { lazy, Suspense } from "react";
+import ReactDOM from "react-dom/client";
 import Body from "./components/Body";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { createBrowserRouter, RouterProvider, Outlet} from "react-router-dom";
-import About from "./components/About";
 import Error from "./components/Error";
-import Contact from "./components/Contact";
-import RestaurantMenu from "./components/RestaurantMenu";
-import Login from "./components/Login";
-import Profile from "./components/ProfileClass";
+import Shimmer from "./components/Shimmer";
+
+// Chunking
+// Code Splitting
+// Dynamic Loading
+// Lazy Loading
+// On Demand Loading
+//Dynamic import
+
+const Instamart = lazy(() => import("./components/Instamart"));
+const About = lazy(() => import("./components/About"));
+const Profile = lazy(() => import("./components/ProfileClass"));
+const Contact = lazy(() => import("./components/Contact"));
+const RestaurantMenu = lazy(()=> import("./components/RestaurantMenu"));
+const Login = lazy(()=> import("./components/Login"));
+
 
 const App = () => {
 
@@ -31,17 +42,17 @@ const appRouter = createBrowserRouter([
         children: [
             {
                 path: "/about",
-                element: <About />,
+                element: <Suspense><About /></Suspense>,
                 children: [
                     {
                         path: "profile",
-                        element: <Profile name={"Satyam"} />
+                        element: <Suspense><Profile name={"Satyam"} /></Suspense>
                     }
                 ]
             },
             {
                 path: "/contact",
-                element: <Contact />
+                element: <Suspense><Contact /></Suspense>
             },
             {
                 path: "/",
@@ -49,11 +60,15 @@ const appRouter = createBrowserRouter([
             },
             {
                 path: "/restaurant/:id",
-                element: <RestaurantMenu />
+                element: <Suspense><RestaurantMenu /></Suspense>
             },
             {
                 path: "/login",
-                element: <Login />
+                element: <Suspense><Login /></Suspense>
+            },
+            {
+                path: "/instamart",
+                element: <Suspense fallback={<Shimmer/>}><Instamart /></Suspense>
             }
         ]
     }
