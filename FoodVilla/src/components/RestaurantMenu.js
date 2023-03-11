@@ -17,14 +17,13 @@ const RestaurantMenu = () => {
 
 
     return (!restaurant) ? <Shimmer /> : (
-        <div className="restaurant-menu">
-            <h3>Restaurant ID: { id }</h3>
-            <h2>{restaurant.name}</h2>
-            <img src= { IMG_CDN_URL + restaurant?.data?.cloudinaryImageId } />
-            <h3>{restaurant?.data?.area}</h3>
-            <h3>{restaurant?.data?.city}</h3>
-            <h3>{restaurant?.data?.costForTwoMsg}</h3>
-            <h3>{restaurant?.data?.avgRating} stars</h3>
+        <div className="w-4/5 m-auto p-5">
+            <h2 className="text-2xl m-2">{restaurant?.data?.name}</h2>
+            <img className="h-[250px] px-10" src= { IMG_CDN_URL + restaurant?.data?.cloudinaryImageId } />
+            <h3 className="px-10 py-1">{restaurant?.data?.area}</h3>
+            <h3 className="px-10 py-1">{restaurant?.data?.city}</h3>
+            <h3 className="px-10 py-1">{restaurant?.data?.costForTwoMsg}</h3>
+            <h3 className="px-10 py-1">{restaurant?.data?.avgRating} stars</h3>
 
             {
                 Object.values(restaurant?.data?.menu?.items).map((item) => {

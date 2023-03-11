@@ -5,10 +5,11 @@ const MenuItem = ({
     itemDescription
 }) => {
     return (
-        <div className="menu-item">
-            <h3> { itemName + " " + (itemIsVeg===1 ? "Veg": "Non Veg") + " Rs. " + (itemPrice/100) } </h3>
+        <div className="p-5 m-5">
+            <h3 className="text-xl"> { itemName + " " + (itemIsVeg===1 ? "Veg": "Non Veg") + " Rs. " + (itemPrice/100) } </h3>
             <p>{itemDescription}</p>
             
+            {/* Add button for adding a new item to cart */}
         </div>
     )
 }

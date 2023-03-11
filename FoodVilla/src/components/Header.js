@@ -15,17 +15,17 @@ const Header = () => {
     }, [isLoggedIn])
 
     return (
-        <div className="header">
+        <div className="flex justify-between bg-pink-50 shadow-50 p-5">
             <Link to="/">
-                <img className="logo" src={LOGO} alt="FoodVilla" />
+                <img className="h-28" src={LOGO} alt="FoodVilla" />
             </Link>
 
-            <ul className="nav-item">
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/about"> About </Link></li>
-                <li><Link to="/contact"> Contact </Link></li>
-                <li><Link to="/instamart">Instamart</Link></li>
-                <li>Cart</li>
+            <ul className="flex">
+                <li className="px-2 py-8"><Link to="/">Home</Link></li>
+                <li className="px-2 py-8"><Link to="/about"> About </Link></li>
+                <li className="px-2 py-8"><Link to="/contact"> Contact </Link></li>
+                <li className="px-2 py-8"><Link to="/instamart">Instamart</Link></li>
+                <li className="px-2 py-8">Cart</li>
             </ul>
 
             {/* <button className="login-button" onClick={() => { isLoggedIn? setIsLoggedIn(false) : setIsLoggedIn(true) }}>{liveState}</button> */}
@@ -33,11 +33,11 @@ const Header = () => {
             {
                 !isLoggedIn ? (
                     <Link to="/login">
-                        <button className="login-button" onClick={() => {setIsLoggedIn(true)}}>Log In</button>
+                        <button className="btn-primary" onClick={() => {setIsLoggedIn(true)}}>Log In</button>
                     </Link>
                 ) : (
                     <Link to="/">
-                        <button className="login-button" onClick={ () => { setIsLoggedIn(false) } }> Log Out</button>
+                        <button className="btn-primary" onClick={ () => { setIsLoggedIn(false) } }> Log Out</button>
                     </Link>
                 )
             }

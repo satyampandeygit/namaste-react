@@ -37,26 +37,29 @@ const Body = () => {
     
     return allRestaurants.length === 0 ? <Shimmer /> : (
         <>
-            <div className="search-container">
-                <input 
-                    type="text"
-                    placeholder="Search"
-                    onChange={(e) => {
-                        setSearchText(e.target.value)
-                    }}
-                />
-                <button onClick={() => {
+            <div className="flex justify-center p-5 m-2">
+                
+                    <input 
+                        className="rounded-half p-2 border-black"
+                        type="text"
+                        placeholder="Search"
+                        onChange={(e) => {
+                            setSearchText(e.target.value)
+                        }}
+                    />
+                
+                <button className="p-2 m-2 rounded   bg-purple-200" onClick={() => {
                     const data = filterData(searchText, allRestaurants);
                     setFilteredRestaurants(data);
                 }}>Search</button>
-                <button onClick={() => {
+                <button className="p-2 m-2 bg-slate-100" onClick={() => {
                     setSearchText("");
                     setFilteredRestaurants(allRestaurants);
                 }}>
                     Reset
                 </button>
             </div>
-            <div className="restaurant-list">
+            <div className="flex flex-wrap justify-between">
                 {
                     filteredRestaurants.map(restaurant => {
                         return (
