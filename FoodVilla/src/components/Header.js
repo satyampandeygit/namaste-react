@@ -17,7 +17,7 @@ const Header = () => {
     return (
         <div className="flex justify-between bg-pink-50 shadow-50 p-5">
             <Link to="/">
-                <img className="h-28" src={LOGO} alt="FoodVilla" />
+                <img data-testid="logo" className="h-28" src={LOGO} alt="FoodVilla" />
             </Link>
 
             <ul className="flex">
@@ -33,11 +33,11 @@ const Header = () => {
             {
                 !isLoggedIn ? (
                     <Link to="/login">
-                        <button className="btn-primary" onClick={() => {setIsLoggedIn(true)}}>Log In</button>
+                        <button data-testid="login-status" className="btn-primary" onClick={() => {setIsLoggedIn(true)}}>Log In</button>
                     </Link>
                 ) : (
                     <Link to="/">
-                        <button className="btn-primary" onClick={ () => { setIsLoggedIn(false) } }> Log Out</button>
+                        <button data-testid="login-status" className="btn-primary" onClick={ () => { setIsLoggedIn(false) } }> Log Out</button>
                     </Link>
                 )
             }

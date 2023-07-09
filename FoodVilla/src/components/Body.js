@@ -17,7 +17,7 @@ const Body = () => {
     // if @params deps contains variable then useEffect is called whenever value of that variable changes
     useEffect(() => {
         console.log("useEffect");
-        getRestaurants();
+        // getRestaurants();
     }, [searchText]);
 
     async function getRestaurants(){

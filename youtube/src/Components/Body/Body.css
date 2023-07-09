@@ -1,0 +1,50 @@
+#homepage.body-wrapper{
+    display: flex;
+}
+
+#homepage-side-nav.menu-list{
+    border-right: 1px solid #eee;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+#homepage-main-content.videos-list{
+    width: 250px;
+    margin: 5px;
+}
+
+.menu-tile{
+    width: 150px !important;
+    padding: 2px 2px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 8px;
+    height: 35px;
+    margin: 2px 10px 0px 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.menu-tile:hover{
+    background-color: #f0e8e8;
+
+}
+
+.material-icons-outlined{
+    font-size: 20px !important;
+}
+
+.menu-tile-icon{
+    margin: 0px 2px;
+}
+
+.menu-tile-title{
+    margin: 0px 2px;
+    padding: 0px 2px;
+}
+
+a:active{
+    background-color: #523e3e;
+}
